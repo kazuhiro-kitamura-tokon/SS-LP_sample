@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>キーパープロショップLP デザイン提案｜旭商事株式会社</title>
+<meta name="description" content="旭商事株式会社向け キーパープロショップLPのデザイン提案。3案のテイストから方向性を選定いただけます。">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --paper: #ffffff;
+    --ink: #1a1a1a;
+    --ink-mute: #5a5a5a;
+    --line: #e3e3e0;
+    --accent: #2a4a7c;
+    --sans: "Inter", "Noto Sans JP", sans-serif;
+    --serif: "Noto Serif JP", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img, svg { max-width: 100%; display: block; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0;
+  }
+  header .inner { display: flex; align-items: center; justify-content: space-between; }
+  header .meta { display: flex; align-items: center; gap: 16px; }
+  header .badge {
+    background: var(--accent); color: #fff;
+    font-size: 11px; letter-spacing: 0.15em;
+    padding: 6px 12px; font-weight: 600;
+  }
+  header .label { font-size: 13px; color: var(--ink-mute); }
+  header .date { font-size: 12px; color: var(--ink-mute); font-family: var(--serif); }
+
+  /* Hero */
+  .hero {
+    padding: 80px 0 56px;
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 600; line-height: 1.4;
+    margin-bottom: 24px; letter-spacing: 0.01em;
+    max-width: 800px;
+  }
+  .hero p {
+    font-size: 16px; color: var(--ink-mute);
+    max-width: 720px; margin-bottom: 12px;
+  }
+  .hero .client {
+    margin-top: 32px;
+    padding: 24px 28px;
+    background: var(--bg);
+    border-left: 3px solid var(--accent);
+    max-width: 720px;
+  }
+  .hero .client dt { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 6px; }
+  .hero .client dd { font-size: 15px; }
+
+  /* Pattern grid */
+  .patterns { padding: 80px 0; }
+  .patterns h2 {
+    font-family: var(--serif);
+    font-size: clamp(24px, 3.5vw, 32px);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .patterns .lead { color: var(--ink-mute); margin-bottom: 56px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; }
+
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.08); }
+
+  /* Thumb mock */
+  .thumb { aspect-ratio: 16 / 10; position: relative; overflow: hidden; }
+  .thumb-a { background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%); }
+  .thumb-b { background: linear-gradient(180deg, #ecfeff 0%, #f0f9ff 50%, #ffffff 100%); }
+  .thumb-c { background: #faf7f0; }
+  .thumb-inner {
+    position: absolute; inset: 0;
+    padding: 24px;
+    display: flex; flex-direction: column; justify-content: center; gap: 10px;
+  }
+  .thumb-eyebrow { font-size: 9px; letter-spacing: 0.3em; }
+  .thumb-title { line-height: 1.2; }
+  .thumb-cta { margin-top: 10px; display: flex; gap: 6px; }
+  .thumb-cta span {
+    font-size: 8px; padding: 5px 10px;
+    border-radius: 2px;
+  }
+
+  .thumb-a .thumb-eyebrow { color: #c8a864; font-family: var(--serif); }
+  .thumb-a .thumb-title { font-family: "Cormorant Garamond", var(--serif); font-size: 26px; font-weight: 400; color: #f5f0e6; font-style: italic; }
+  .thumb-a .thumb-cta span:first-child { background: #c8a864; color: #0a0a0a; }
+  .thumb-a .thumb-cta span:last-child { border: 1px solid #2a2a2a; color: #f5f0e6; }
+
+  .thumb-b .thumb-eyebrow { background: rgba(14,165,233,0.1); color: #0284c7; padding: 4px 10px; border-radius: 999px; align-self: flex-start; font-weight: 600; letter-spacing: 0.1em; }
+  .thumb-b .thumb-title { font-family: var(--sans); font-size: 26px; font-weight: 700; color: #0b1f3a; }
+  .thumb-b .thumb-title em { background: linear-gradient(120deg, #0ea5e9, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-style: normal; }
+  .thumb-b .thumb-cta span:first-child { background: #0ea5e9; color: #fff; border-radius: 6px; }
+  .thumb-b .thumb-cta span:last-child { background: #fff; color: #0b1f3a; border-radius: 6px; border: 1px solid #e2e8f0; }
+
+  .thumb-c .thumb-eyebrow { color: #b33a3a; font-family: var(--serif); }
+  .thumb-c .thumb-title { font-family: var(--serif); font-size: 26px; font-weight: 600; color: #1b2845; line-height: 1.4; }
+  .thumb-c .thumb-cta span:first-child { background: #1b2845; color: #faf7f0; }
+  .thumb-c .thumb-cta span:last-child { border: 1px solid #1b2845; color: #1b2845; }
+  .thumb-c::before {
+    content: ""; position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(27,40,69,0.08) 1px, transparent 1.5px);
+    background-size: 18px 18px;
+  }
+
+  /* Card body */
+  .card-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+  .card-tag {
+    font-size: 11px; letter-spacing: 0.18em; font-weight: 700;
+    color: var(--accent); margin-bottom: 8px;
+  }
+  .card-title {
+    font-family: var(--serif);
+    font-size: 22px; font-weight: 600;
+    margin-bottom: 12px; line-height: 1.4;
+  }
+  .card-desc { font-size: 14px; color: var(--ink-mute); margin-bottom: 20px; flex: 1; }
+  .card-meta {
+    display: grid; grid-template-columns: auto 1fr; gap: 6px 16px;
+    font-size: 13px; margin-bottom: 24px;
+    padding-top: 16px; border-top: 1px solid var(--line);
+  }
+  .card-meta dt { color: var(--ink-mute); font-weight: 500; }
+  .card-meta dd { color: var(--ink); font-weight: 500; }
+  .card-cta {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 12px 22px;
+    background: var(--ink); color: var(--paper);
+    font-size: 14px; font-weight: 600;
+    transition: background 0.2s;
+  }
+  .card-cta:hover { background: var(--accent); }
+
+  /* Notes */
+  .notes {
+    padding: 56px 0 96px;
+    border-top: 1px solid var(--line);
+  }
+  .notes h3 {
+    font-family: var(--serif); font-size: 20px; font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .notes ul {
+    list-style: none;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 24px 28px;
+  }
+  .notes li {
+    padding: 8px 0;
+    font-size: 14px; color: var(--ink-mute);
+    border-bottom: 1px dashed var(--line);
+  }
+  .notes li:last-child { border-bottom: 0; }
+  .notes li strong { color: var(--ink); font-weight: 600; }
+
+  footer {
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-size: 12px; color: var(--ink-mute);
+    background: var(--paper);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container inner">
+    <div class="meta">
+      <span class="badge">DESIGN PROPOSAL</span>
+      <span class="label">キーパープロショップ LP デザイン提案</span>
+    </div>
+    <span class="date">2026.05 ／ 旭商事株式会社 様</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>大田区・雪谷の<br>キーパープロショップLP、3つのデザインからお選びください。</h1>
+    <p>Google広告からの流入を想定した、モバイルファーストの単一ページLPを3案ご提案いたします。</p>
+    <p>セクション構成・掲載情報・SEO/構造化データはすべて同一です。<strong>違いは「見た目のトーン」のみ</strong>。御社のブランド戦略にもっとも合うものをお選びください。</p>
+    <dl class="client">
+      <dt>CLIENT</dt>
+      <dd>旭商事株式会社（1921年創業）／ 東京都大田区雪谷</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="patterns">
+  <div class="container">
+    <h2>3つのデザイン方向性</h2>
+    <p class="lead">クリックすると、各案の完全なデモLPが開きます。</p>
+
+    <div class="grid">
+      <!-- Pattern A -->
+      <article class="card">
+        <div class="thumb thumb-a">
+          <div class="thumb-inner">
+            <p class="thumb-eyebrow">EST. 1921</p>
+            <h3 class="thumb-title">本物の艶を、<br>本物の手で。</h3>
+            <div class="thumb-cta">
+              <span>無料見積</span><span>03-XXXX</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">PATTERN A</p>
+          <h3 class="card-title">プレミアム黒金</h3>
+          <p class="card-desc">高級車オーナー・ブランド志向層向け。ハイブランド時計サイトのような重厚さで、本物の艶と職人技を伝える。</p>
+          <dl class="card-meta">
+            <dt>ターゲット</dt><dd>高級車オーナー・40代〜</dd>
+            <dt>カラー</dt><dd>黒 × ゴールド × 白</dd>
+            <dt>タイポ</dt><dd>セリフ系（Cormorant + 明朝）</dd>
+            <dt>印象</dt><dd>重厚・静謐・本物感</dd>
+          </dl>
+          <a href="pattern-a/index.html" class="card-cta">パターンAを見る →</a>
+        </div>
+      </article>
+
+      <!-- Pattern B -->
+      <article class="card">
+        <div class="thumb thumb-b">
+          <div class="thumb-inner">
+            <p class="thumb-eyebrow">大田区・雪谷｜キーパープロショップ</p>
+            <h3 class="thumb-title">キレイを、<br><em>毎日のあたりまえに。</em></h3>
+            <div class="thumb-cta">
+              <span>無料見積</span><span>📞 電話</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">PATTERN B</p>
+          <h3 class="card-title">クリア&ライト</h3>
+          <p class="card-desc">ファミリー・新車購入層向け。SaaS的な清潔感と透明感。Google広告からの流入と最も相性が良い、現代的トーン。</p>
+          <dl class="card-meta">
+            <dt>ターゲット</dt><dd>ファミリー・新車購入層</dd>
+            <dt>カラー</dt><dd>白 × 水色 × ガラス</dd>
+            <dt>タイポ</dt><dd>サンセリフ（Inter + Noto Sans）</dd>
+            <dt>印象</dt><dd>清潔・軽やか・透明感</dd>
+          </dl>
+          <a href="pattern-b/index.html" class="card-cta">パターンBを見る →</a>
+        </div>
+      </article>
+
+      <!-- Pattern C -->
+      <article class="card">
+        <div class="thumb thumb-c">
+          <div class="thumb-inner">
+            <p class="thumb-eyebrow">— 大正十年創業</p>
+            <h3 class="thumb-title">百年、<br>車に向き合ってきた手で。</h3>
+            <div class="thumb-cta">
+              <span>無料見積</span><span>03-XXXX</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">PATTERN C</p>
+          <h3 class="card-title">老舗 × 職人</h3>
+          <p class="card-desc">信頼重視層・地元客向け。和モダンの料亭サイトのような渋さと温かさで、105年の歴史と職人技を全面に。</p>
+          <dl class="card-meta">
+            <dt>ターゲット</dt><dd>信頼重視層・地元客</dd>
+            <dt>カラー</dt><dd>生成り × 紺 × 朱</dd>
+            <dt>タイポ</dt><dd>明朝（Shippori + Noto Serif）</dd>
+            <dt>印象</dt><dd>渋く・温かく・職人</dd>
+          </dl>
+          <a href="pattern-c/index.html" class="card-cta">パターンCを見る →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="notes">
+  <div class="container">
+    <h3>3案共通で実装している要素</h3>
+    <ul>
+      <li><strong>SEO対策</strong>：セマンティックHTML、メタタグ完備（description / OG / Twitter Card / canonical）、ローカルキーワード最適化</li>
+      <li><strong>GEO対策（Generative Engine Optimization）</strong>：JSON-LD構造化データ（LocalBusiness / FAQPage）、LLMが引用しやすいQ&A構造</li>
+      <li><strong>モバイルファースト</strong>：スマホでの表示・タップ操作を最優先に設計</li>
+      <li><strong>表示速度</strong>：外部依存はGoogle Fontsのみ。画像はSVG/CSSで軽量化（実画像は別途差し替え）</li>
+      <li><strong>共通セクション</strong>：Hero／Q&A／メニュー（3プラン）／Before・After／選ばれる理由／アクセス／CTA</li>
+      <li><strong>差し替え必須項目</strong>：電話番号・住所・営業時間・実車写真・Google Map埋め込み</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 ／ デザイン提案資料：旭商事株式会社様向け</p>
+  </div>
+</footer>
+
+</body>
+</html>
